@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Kipp prediction</title>
+    <style>
+        #image{
+            display:none;
+    </style>
 </head>
 <body>
 
@@ -16,16 +20,19 @@
 <form><p> ACT: <input style="width:110px;height:28px;font-size:12pt;"type="float" name="ACT"> (eg:23)</p></form>
 <form><p> AP courses? <input style="width:110px;height:28px;font-size:12pt;"type="float" name="AP">（how many AP course you took? eg:3） </p></form>
 <form><p> Years in KIPP <input style="width:110px;height:28px;font-size:12pt;"type="float" name="Years in KIPP"> (eg:4) </p></form><br>
-<form action="" >  <input type="button" value="Predict"></form>
+<form action="" >  <input type="button" value="Predict">  </form>
 
-<img src="https://xzhou0.github.io/KIPP/lables.png" alt="some_text">
-    <SCRIPT LANGUAGE="JavaScript">  
-    function reP(){  
-    document.getElementById('oImg').style.display = "block";  
-    }  
-    </SCRIPT>  
-    <img src='https://xzhou0.github.io/KIPP/lables.png' alt="some_text">  
-    <INPUT TYPE="button" value='Predict' onclick="reP()">  
+<div>
+    <img src="https://xzhou0.github.io/KIPP/lables.png" id="image" alt="result" />
+</div>
+
+<button type="button" onclick="imageShow()">Show results</button>
+
+<script>
+    function imageShow(){
+        document.getElementById('image').style.display = "block";
+    }
+</script>
 
 </body>
 </html>
